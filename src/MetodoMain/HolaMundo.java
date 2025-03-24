@@ -1,3 +1,4 @@
+package MetodoMain;
 /* 
  * ====EXPLICACION====
  * Todo en Java va a necesitar un archivo con una clase.
@@ -32,6 +33,14 @@
         // Ten cuidado con las llaves del método main, la que cierra ciene que estar después del Hola Mundo
 
 
+        public class HolaMundo {
+        
+            public static void main(String[] args) {
+                System.out.println("Hola Mundo");
+            }
+        
+        }
+        
 
 /*
  * ==================

@@ -1,3 +1,4 @@
+package MetodoMain;
 // Escribe un programa que imprima en dos líneas diferentes las siguientes frases:
 // "Estoy aprendiendo a programar"
 // "y lo voy a conseguir."
