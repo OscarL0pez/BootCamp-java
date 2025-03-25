@@ -47,6 +47,14 @@ public class CA_MetodosYVariables {
         char c = 'A';
         boolean bool = true;
         System.out.println("Variables primitivas declaradas correctamente.");
+        System.out.println("Valor de byte b: " + b);
+        System.out.println("Valor de short s: " + s);
+        System.out.println("Valor de int i: " + i);
+        System.out.println("Valor de long l: " + l);
+        System.out.println("Valor de float f: " + f);
+        System.out.println("Valor de double d: " + d);
+        System.out.println("Valor de char c: " + c);
+        System.out.println("Valor de boolean bool: " + bool);
 
         /*
          * =============================
