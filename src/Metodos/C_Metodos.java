@@ -56,19 +56,14 @@ public class C_Metodos {
         int b = sc.nextInt();
 
         // Guarda en una variable llamada suma el resultado de llamar al método suma()
-        
         // Que muestre por pantalla dicho resultado
-        
-
-        // Guarda en una variable llamada resta el resultado de llamar al método resta()
-        
+        int suma = suma(a, b);
         // Que muestre por pantalla dicho resultado
-        
-
+        System.out.println("La suma de los números es: " + suma);
         // Guarda en una variable llamada division el resultado de llamar al método division()
-        
+        int multiplicacion = multiplicacion(a, b);
         // Que muestre por pantalla dicho resultado
-        
+        System.err.println("La multiplicación de los números es: " + multiplicacion);
 
         // Guarda en una variable llamada multiplicacion el resultado de llamar al método multiplicacion()
         
@@ -103,10 +98,26 @@ public class C_Metodos {
      */
 
     // Define los métodos necesarios en este espacio:
+    public static int suma(int a, int b) {
+        return a + b;
+    }
 
+     public static int resta(int a, int b) {
+        return a - b;
+    }
 
+    public static int multiplicacion(int a, int b) {
+        return a * b;
+    }
 
-
+    public static int division(int a, int b) {
+        if (b == 0) {
+            System.out.println("No se puede dividir por 0");
+            return 0;
+        } else {
+            return a / b;
+        }
+    }
 
 
     /* ================
