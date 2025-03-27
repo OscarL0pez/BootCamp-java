@@ -10,8 +10,6 @@ public class D_Condiciones {
         } else {
             System.out.println("El número " + num + " es negativo");
         }
-
-
     }
 
     // 2. Verificar si un número es negativo
@@ -22,7 +20,6 @@ public class D_Condiciones {
         } else {
             System.out.println("El número " + num + " es negativo");
         }
-
     }
 
     // 3. Verificar si un número es cero
@@ -33,7 +30,6 @@ public class D_Condiciones {
         } else {
             System.out.println("El número " + num + " no es cero");
         }
-
     }
 
     // 4. Comprobar si un número es par
@@ -50,12 +46,11 @@ public class D_Condiciones {
     // 5. Comprobar si un número es impar
     public static void ejercicio5() {
       int num = 6;
-        if (num % 2 == 0) {
+        if (num % 2 == 1) {
             System.out.println("El número " + num + " es par");
         } else {
             System.out.println("El número " + num + " es impar");
         }
-
     }
 
     // 6. Verificar si una persona es mayor de edad
@@ -65,9 +60,7 @@ public class D_Condiciones {
             System.out.println("La persona es mayor de edad");
         } else {
             System.out.println("La persona es menor de edad");
-            System.out.println();
         }
-
     }
 
     // 7. Comparar dos números
@@ -81,7 +74,6 @@ public class D_Condiciones {
         } else {
             System.out.println("Los números son iguales");
         }
-
     }
 
     // 8. Validar si un número está en un rango
@@ -94,7 +86,6 @@ public class D_Condiciones {
         } else {
             System.out.println("El número " + num + " no está en el rango");
         }
-
     }
 
     // 9. Verificar si un carácter es una vocal
@@ -105,7 +96,6 @@ public class D_Condiciones {
         } else {
             System.out.println("El carácter " + vocal + " no es una vocal");
         }
-
     }
 
     // 10. Determinar si un año es bisiesto
@@ -116,7 +106,6 @@ public class D_Condiciones {
         } else {
             System.out.println("El año " + anio + " no es bisiesto");
         }
-
     }
 
     // 11. Evaluar si un número es positivo, negativo o cero
@@ -129,19 +118,17 @@ public class D_Condiciones {
         } else {
             System.out.println("El número " + num + " es cero");
         }
-            
-
     }
 
     // 12. Determinar si se puede acceder a un evento (mayor de edad y con entrada)
     public static void ejercicio12() {
+        boolean tieneEntrada = true;
         int edad =18;
-        if (edad >= 18) {
+        if (edad >= 18 && tieneEntrada) {
             System.out.println("La persona es mayor de edad");
         } else {
             System.out.println("La persona es menor de edad");
         }
-
     }
 
     // 13. Verificar si un número es divisible entre 3 y 5
@@ -152,7 +139,6 @@ public class D_Condiciones {
         } else {
             System.out.println("El número " + num + " no es divisible entre 3 y 5");
         }
-
     }
 
     // 14. Comprobar si un número no está en un rango
@@ -165,7 +151,6 @@ public class D_Condiciones {
         } else {
             System.out.println("El número " + num + " está en el rango");
         }
-
     }
 
     // 15. Determinar el mayor de tres números
@@ -180,8 +165,6 @@ public class D_Condiciones {
         } else {
             System.out.println("El número " + num3 + " es el mayor");
         }
-
-
     }
 
     // 16. Verificar si una persona puede votar (edad >= 18)
@@ -192,24 +175,22 @@ public class D_Condiciones {
         } else {
             System.out.println("La persona no puede votar");
         }
-
     }
 
     // 17. Clasificar un número como positivo par, positivo impar, negativo par o negativo impar
     public static void ejercicio17() {
-        int num = 5;
+        int num = -5;
         if (num > 0 && num % 2 == 0) {
             System.out.println("El número " + num + " es positivo par");
-        }else if (num < 0 && num % 2 !=0) {
+        } else if (num > 0 && num % 2 != 0) {
             System.out.println("El número " + num + " es positivo impar");
-        } 
-        else if (num > 0 && num % 2 != 0) {
+        } else if (num < 0 && num % 2 == 0) {
             System.out.println("El número " + num + " es negativo par");
         } else {
             System.out.println("El número " + num + " es negativo impar");
         }
-
     }
+    
 
     // 18. Validar si una persona tiene acceso VIP (edad > 21 o paga extra)
     public static void ejercicio18() {
@@ -220,8 +201,6 @@ public class D_Condiciones {
         } else {
             System.out.println("La persona no tiene acceso VIP");
         }
-
-    
     }
 
     // 19. Evaluar si dos variables booleanas son verdaderas
@@ -233,28 +212,22 @@ public class D_Condiciones {
         } else {
             System.out.println("Al menos una de las variables es falsa");
         }
-
     }
 
     // 20. Clasificar la nota de un examen
     public static void ejercicio20() {
-        int nota = 5;
-        if (nota >= 0 && nota <= 5) {
-            System.out.println("Muy deficiente");
-        } else if (nota >= 6 && nota <= 6) {
-            System.out.println("Insuficiente");
-        } else if (nota >= 7 && nota <= 7) {
-            System.out.println("Suficiente");
-        } else if (nota >= 8 && nota <= 8) {
-            System.out.println("Bien");
-        } else if (nota >= 9 && nota <= 9) {
-            System.out.println("Notable");
-        } else if (nota >= 10 && nota <= 10) {
-            System.out.println("Sobresaliente");
+        int nota = 10;
+        if (nota <= 0 && nota <= 4) {
+            System.out.println("La nota es insuficiente");
+        } else if (nota == 5) {
+            System.out.println("La nota es suficiente");
+        } else if (nota == 6) {
+            System.out.println("La nota es bien");
+        } else if (nota == 7 && nota == 8) {
+            System.out.println("La nota es notable");
         } else {
-            System.out.println("Nota no válida");
+            System.out.println("La nota es sobresaliente");
         }
-
     }
 
     // 21. Determinar si una letra es mayúscula
@@ -265,8 +238,6 @@ public class D_Condiciones {
         } else {
             System.out.println("La letra " + letra + " es minúscula");
         }
-
-
     }
 
     // 22. Verificar si una letra es minúscula
@@ -277,7 +248,6 @@ public class D_Condiciones {
         } else {
             System.out.println("La letra " + letra + " es mayúscula");
         }
-
     }
 
     // 23. Validar si dos contraseñas son iguales
@@ -289,7 +259,6 @@ public class D_Condiciones {
         } else {
             System.out.println("Las contraseñas no son iguales");
         }
-
     }
 
     // 24. Verificar si un número está dentro de varios rangos posibles
@@ -304,38 +273,9 @@ public class D_Condiciones {
         } else {
             System.out.println("El número " + num + " no está en ninguno de los rangos");
         }
-
     }
     // 25. Llamar todos los ejercicios desde un método separado
-    public static void llamarEjercicios() {
-        
-        // Aquí puedes llamar a los ejercicios si es necesario
-    }
     public static void main(String[] args) {
-        // Llamar a los ejercicios
-        ejercicio1();
-        ejercicio2();
-        ejercicio3();
-        ejercicio4();
-        ejercicio5();
-        ejercicio6();
-        ejercicio7();
-        ejercicio8();
-        ejercicio9();
-        ejercicio10();
-        ejercicio11();
-        ejercicio12();
-        ejercicio13();
-        ejercicio14();
-        ejercicio15();
-        ejercicio16();
-        ejercicio17();
-        ejercicio18();
-        ejercicio19();
-        ejercicio20();
-        ejercicio21();
-        ejercicio22();
-        ejercicio23();
-        ejercicio24();
+    ejercicio17();
     }
-}  
+}
