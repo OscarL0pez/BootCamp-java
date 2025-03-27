@@ -90,8 +90,8 @@ public class D_Condiciones {
 
     // 9. Verificar si un carácter es una vocal
     public static void ejercicio9() {
-        String vocal = "5";
-        if (vocal.equals("a") || vocal.equals("e") || vocal.equals("i") || vocal.equals("o") || vocal.equals("u")) {
+        char vocal = 'a';
+        if (vocal == 'a' || vocal == 'e' || vocal == 'i' || vocal == 'o' || vocal == 'u') {
             System.out.println("El carácter " + vocal + " es una vocal");
         } else {
             System.out.println("El carácter " + vocal + " no es una vocal");
@@ -263,7 +263,7 @@ public class D_Condiciones {
 
     // 24. Verificar si un número está dentro de varios rangos posibles
     public static void ejercicio24() {
-        int num = 5;
+        int num = 31;
         int min1 = 0;
         int max1 = 10;
         int min2 = 20;
@@ -276,6 +276,7 @@ public class D_Condiciones {
     }
     // 25. Llamar todos los ejercicios desde un método separado
     public static void main(String[] args) {
-    ejercicio17();
+        // Call all exercises here if needed
+        ejercicio24();
     }
 }
