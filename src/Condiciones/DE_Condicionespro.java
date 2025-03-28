@@ -1,31 +1,33 @@
+package Condiciones;
+
 import java.util.Scanner;
 
 public class DE_Condicionespro {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int opcion;
-        do {
-            mostrarMenu();
-            opcion = sc.nextInt();
-            sc.nextLine(); 
-
-            switch (opcion) {
-                case 1 -> ejecutarDiaSemana(sc);
-                case 2 -> ejecutarCalificacion(sc);
-                case 3 -> ejecutarMenuJuego(sc);
-                case 4 -> ejecutarEstacion(sc);
-                case 5 -> ejecutarFigura(sc);
-                case 6 -> ejecutarMoneda(sc);
-                case 7 -> ejecutarMes(sc);
-                case 8 -> ejecutarEtapaEscolar(sc);
-                case 9 -> ejecutarLetraDNI(sc);
-                case 10 -> ejecutarSemaforo(sc);
-                case 0 -> System.out.println("Saliendo...");
-                default -> System.out.println("Opción no válida");
-            }
-        } while (opcion != 0);
-        sc.close();
+        try (Scanner sc = new Scanner(System.in)) {
+            int opcion;
+            do {
+                mostrarMenu();
+                opcion = sc.nextInt();
+                sc.nextLine();
+                
+                switch (opcion) {
+                    case 1 -> ejecutarDiaSemana(sc);
+                    case 2 -> ejecutarCalificacion(sc);
+                    case 3 -> ejecutarMenuJuego(sc);
+                    case 4 -> ejecutarEstacion(sc);
+                    case 5 -> ejecutarFigura(sc);
+                    case 6 -> ejecutarMoneda(sc);
+                    case 7 -> ejecutarMes(sc);
+                    case 8 -> ejecutarEtapaEscolar(sc);
+                    case 9 -> ejecutarLetraDNI(sc);
+                    case 10 -> ejecutarSemaforo(sc);
+                    case 0 -> System.out.println("Saliendo...");
+                    default -> System.out.println("Opción no válida");
+                }
+            } while (opcion != 0);
+        }
     }
 
     public static void mostrarMenu() {

@@ -1,6 +1,5 @@
 package Condiciones;
 
-import java.awt.SystemTray;
 import java.util.Scanner;
 
 public class DA_CondicionesSwitch {
@@ -42,21 +41,20 @@ public class DA_CondicionesSwitch {
     // Opción inválida
 
     public static void ejercicio3() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Menú de opciones");
-        System.out.println("1. Nueva partida");
-        System.out.println("2. Cargar partida");
-        System.out.println("3. Salir");
-        System.out.println("Selecciona una opción: ");
-        int opcion = scanner.nextInt();
-        switch (opcion) {
-            case 1 -> System.out.println("Seleccionaste Nueva partida");
-            case 2 -> System.out.println("Seleccionaste Cargar partida");
-            case 3 -> System.out.println("Seleccionaste Salir");
-            default -> System.out.println("Opción inválida");
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Menú de opciones");
+            System.out.println("1. Nueva partida");
+            System.out.println("2. Cargar partida");
+            System.out.println("3. Salir");
+            System.out.println("Selecciona una opción: ");
+            int opcion = scanner.nextInt();
+            switch (opcion) {
+                case 1 -> System.out.println("Seleccionaste Nueva partida");
+                case 2 -> System.out.println("Seleccionaste Cargar partida");
+                case 3 -> System.out.println("Seleccionaste Salir");
+                default -> System.out.println("Opción inválida");
+            }
         }
-        
-        scanner.close();
     }
         
     // 4. Estación del año: verifica en qué estación estás
@@ -98,46 +96,46 @@ public class DA_CondicionesSwitch {
     // GBP -> Libra
     // JPY -> Yen
     public static void ejercicio6() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Tipo de moneda");
-        System.out.println("USD -> Dolar");
-        System.out.println("EUR -> Euro");
-        System.out.println("GBP -> Libra");
-        System.out.println("JPY -> Yen");
-        System.out.println("Selecciona una opción: ");
-        String moneda = scanner.nextLine();
-        switch (moneda) {
-            case "USD" -> System.out.println("Dolar");
-            case "EUR" -> System.out.println("Euro");
-            case "GBP" -> System.out.println("Libra");
-            case "JPY" -> System.out.println("Yen");
-            default -> System.out.println("Moneda inválida");
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Tipo de moneda");
+            System.out.println("USD -> Dolar");
+            System.out.println("EUR -> Euro");
+            System.out.println("GBP -> Libra");
+            System.out.println("JPY -> Yen");
+            System.out.println("Selecciona una opción: ");
+            String moneda = scanner.nextLine();
+            switch (moneda) {
+                case "USD" -> System.out.println("Dolar");
+                case "EUR" -> System.out.println("Euro");
+                case "GBP" -> System.out.println("Libra");
+                case "JPY" -> System.out.println("Yen");
+                default -> System.out.println("Moneda inválida");
+            }
         }
-        
-        scanner.close();
     }
 
     // 7. Número de mes: verifica el mes según su número (del 1 al 12)
     // Enero, Febrero...
     public static void ejercicio7() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Número de mes");
-        System.out.println("Ingresa un número del 1 al 12: ");
-        int mes = scanner.nextInt();
-        switch (mes) {
-            case 1 -> System.out.println("Enero");
-            case 2 -> System.out.println("Febrero");
-            case 3 -> System.out.println("Marzo");
-            case 4 -> System.out.println("Abril");
-            case 5 -> System.out.println("Mayo");
-            case 6 -> System.out.println("Junio");
-            case 7 -> System.out.println("Julio");
-            case 8 -> System.out.println("Agosto");
-            case 9 -> System.out.println("Septiembre");
-            case 10 -> System.out.println("Octubre");
-            case 11 -> System.out.println("Noviembre");
-            case 12 -> System.out.println("Diciembre");
-            default -> System.out.println("Mes inválido");
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Número de mes");
+            System.out.println("Ingresa un número del 1 al 12: ");
+            int mes = scanner.nextInt();
+            switch (mes) {
+                case 1 -> System.out.println("Enero");
+                case 2 -> System.out.println("Febrero");
+                case 3 -> System.out.println("Marzo");
+                case 4 -> System.out.println("Abril");
+                case 5 -> System.out.println("Mayo");
+                case 6 -> System.out.println("Junio");
+                case 7 -> System.out.println("Julio");
+                case 8 -> System.out.println("Agosto");
+                case 9 -> System.out.println("Septiembre");
+                case 10 -> System.out.println("Octubre");
+                case 11 -> System.out.println("Noviembre");
+                case 12 -> System.out.println("Diciembre");
+                default -> System.out.println("Mes inválido");
+            }
         }
         
     }
@@ -231,7 +229,7 @@ public class DA_CondicionesSwitch {
         //ejercicio7(); 
         //ejercicio8(); 
         //ejercicio9(75963598); 
-        ejercicio10();
+        //ejercicio10();
         
     }
 }  
