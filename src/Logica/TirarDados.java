@@ -33,9 +33,9 @@ public class TirarDados {
             System.out.print("Introduce el número de tiradas: ");
             int tiradas = scanner.nextInt();
 
-            int[] frecuencias = new int[13]; // Indices de 2 a 12 representan las sumas
+            int[] frecuencias = new int[13]; 
 
-            // Simular las tiradas
+            
             for (int i = 0; i < tiradas; i ++) {
                 int dado1 = lanzarDado();
                 int dado2 = lanzarDado();
