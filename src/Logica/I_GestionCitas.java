@@ -7,27 +7,28 @@ public class I_GestionCitas {
     static ArrayList<String> horasCitas = new ArrayList<>();
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int opcion;
+        try (Scanner scanner = new Scanner(System.in)) {
+            int opcion;
 
-        System.out.println("=== Gestión de Citas Médicas ===");
+            System.out.println("=== Gestión de Citas Médicas ===");
 
-        // Bucle principal del menú
-        do {
-            mostrarMenu();
-            opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar el buffer
+            // Bucle principal del menú
+            do {
+                mostrarMenu();
+                opcion = scanner.nextInt();
+                scanner.nextLine(); // Limpiar el buffer
 
-            switch (opcion) {
-                case 1 -> agregarCita(scanner); // Agregar una nueva cita
-                case 2 -> verCitas(); // Ver todas las citas
-                case 3 -> cancelarCita(scanner); // Cancelar una cita
-                case 4 -> System.out.println("Saliendo del programa..."); // Salir
-                default -> System.out.println("Opción no válida. Intenta de nuevo.");
-            }
-        } while (opcion != 4);
+                switch (opcion) {
+                    case 1 -> agregarCita(scanner); // Agregar una nueva cita
+                    case 2 -> verCitas(); // Ver todas las citas
+                    case 3 -> cancelarCita(scanner); // Cancelar una cita
+                    case 4 -> System.out.println("Saliendo del programa..."); // Salir
+                    default -> System.out.println("Opción no válida. Intenta de nuevo.");
+                }
+            } while (opcion != 4);
 
-        scanner.close(); // Cerrar el scanner
+            scanner.close(); // Cerrar el scanner
+        }
     }
 
     // Método para mostrar el menú de opciones

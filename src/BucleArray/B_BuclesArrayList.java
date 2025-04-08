@@ -188,8 +188,6 @@ public class B_BuclesArrayList {
             System.out.println("Lista sin ceros consecutivos: " + lista);
         }
 
-       
-
         public static void ejercicio8() {
         // 8. Contar elementos mayores al promedio
         // calcula el promedio de los números que hay en un array

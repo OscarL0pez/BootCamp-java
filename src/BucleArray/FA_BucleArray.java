@@ -5,7 +5,7 @@ package BucleArray;
  * sin usar estructuras más avanzadas o clases adicionales. Luego se incluyen ejercicios con métodos básicos del array.
  */
 
- public class FA_BucleArray {
+    public class FA_BucleArray {
     public static void main(String[] args) {
         // Llamar a cada método de los ejercicios
         //ejercicio1();
@@ -40,14 +40,14 @@ package BucleArray;
 
      // 1. Crear un array de 5 enteros e imprimirlos uno a uno.
 
-     public static void ejercicio1() {
+        public static void ejercicio1() {
         System.out.println("Ejercicio 1: Array de 5 enteros");
-         int[] numeros = {1, 2, 3, 4, 5};
-         for (int i = 0; i < numeros.length; i++) {
-             System.out.println("Número " + (i) + ": " + numeros[i]);
-         }
-         separador();
-     }
+            int[] numeros = {1, 2, 3, 4, 5};
+            for (int i = 0; i < numeros.length; i++) {
+                System.out.println("Número " + (i) + ": " + numeros[i]);
+            }
+            separador();
+        }  
         
         // 2. Crear un array de 3 Strings con nombres e imprimirlos.
 
