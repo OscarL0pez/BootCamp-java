@@ -4,10 +4,11 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class _03_HashMap {
+    // Declaración de un HashMap global llamado diccionario
     static HashMap<String, String> diccionario = new HashMap<>();
 
     public static void main(String[] args) {
-        // 1. Crear un diccionario y añade 5 pares de valor
+        // 1. Crear un diccionario y añadir pares clave-valor
         diccionario.put("manzana", "fruta roja");
         diccionario.put("pera", "fruta verde");
         diccionario.put("naranja", "fruta naranja");
@@ -18,23 +19,19 @@ public class _03_HashMap {
         diccionario.put("frambuesa", "fruta roja");
         diccionario.put("uva", "fruta pequeña");
 
-        //ejercicio1();
+        // Llamar a los ejercicios
+        // ejercicio1();
         ejercicio2();
-        //ejercicio3();
-        //ejercicio4();
-        //ejercicio5();
-        //ejercicio6();
-        //ejercicio7();
-        //ejercicio8();
-        //ejercicio9();
-        //ejercicio10();
-
-
-        
+        // ejercicio3();
+        // ejercicio4();
+        // ejercicio5();
+        // ejercicio6();
+        // ejercicio7();
+        // ejercicio8();
+        // ejercicio9();
+        // ejercicio10();
     }
 
-
-        
     public static void ejercicio1() {
         // Mostrar la lista completa de claves y valores
         System.out.println("Diccionario completo:");
@@ -56,6 +53,7 @@ public class _03_HashMap {
         String nuevoValor = sc.nextLine();
         diccionario.put(clave, nuevoValor);
         System.out.println("El valor de " + clave + " ha sido modificado a: " + nuevoValor);
+
         // Mostrar la lista completa de claves y valores después de la modificación
         System.out.println("Diccionario completo después de la modificación:");
         diccionario.forEach((k, v) -> System.out.println(k + ": " + v));
@@ -94,6 +92,7 @@ public class _03_HashMap {
             System.out.println("La clave " + clave + " no existe en el diccionario.");
         }
     }
+
     public static void ejercicio4() {
         // 4. Eliminar una entrada
         Scanner sc = new Scanner(System.in);
@@ -105,11 +104,13 @@ public class _03_HashMap {
             System.out.println("La clave " + clave + " no existe en el diccionario.");
         }
     }
+
     public static void ejercicio5() {
         // 5. Mostrar todas las claves y los valores
         System.out.println("Diccionario completo:");
         diccionario.forEach((clave, valor) -> System.out.println(clave + ": " + valor));
     }
+
     public static void ejercicio6() {
         // 6. Contar caracteres en una frase
         String frase = "me estoy peleando con HashMap";
@@ -121,6 +122,7 @@ public class _03_HashMap {
         }
         System.out.println("La frase tiene " + contador + " caracteres (sin contar espacios).");
     }
+
     public static void ejercicio7() {
         // 7. Agrupar nombres por inicial
         String[] listaNombres = {"Ana", "Andrés", "Bea", "Carlos", "Carmen"};
@@ -133,6 +135,7 @@ public class _03_HashMap {
         System.out.println("Nombres agrupados por inicial:");
         agrupados.forEach((k, v) -> System.out.println(k + ": " + v));
     }
+
     public static void ejercicio8() {
         // 8. Invertir un HashMap (valores únicos)
         HashMap<String, String> original = new HashMap<>();
@@ -146,34 +149,29 @@ public class _03_HashMap {
         System.out.println("HashMap invertido:");
         invertido.forEach((k, v) -> System.out.println(k + ": " + v));
     }
-    
+
     public static void ejercicio9() {
-        // 9. HashMap con claves nombres y anidaciones... 
+        // 9. HashMap con claves nombres y anidaciones
+        // Cada clave es un nombre, y el valor es otro HashMap con "tlfn" y "email"
+        HashMap<String, HashMap<String, String>> agenda = new HashMap<>();
+        HashMap<String, String> contacto1 = new HashMap<>();
+        contacto1.put("tlfn", "123456789");
+        contacto1.put("email", "ana@example.com");
+        agenda.put("Ana", contacto1);
 
-        // key es el nombre
-        // dentro de cada nombre tiene que haber otros dos pares de valores:
-        // tlfn y email.
+        HashMap<String, String> contacto2 = new HashMap<>();
+        contacto2.put("tlfn", "987654321");
+        contacto2.put("email", "carlos@example.com");
+        agenda.put("Carlos", contacto2);
 
+        System.out.println("Agenda:");
+        agenda.forEach((nombre, datos) -> {
+            System.out.println(nombre + " -> Teléfono: " + datos.get("tlfn") + ", Email: " + datos.get("email"));
+        });
     }
 
-    
-
-    // Verifica en el HashMap anterior un contacto.
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     // 10. Agenda simple con búsqueda
-
-
-
+    public static void ejercicio10() {
+        // Implementar una agenda con búsqueda de contactos
+    }
 }
